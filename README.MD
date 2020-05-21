@@ -35,3 +35,23 @@ $ sudo service docker restart
     - v : chaincode version
     - V : system chaincode name
 
+- command list
+~~~
+> docker exec -it cli bash
+
+cli> peer chaincode install -n jes_cc_node -v 1.0 -l node -p /opt/gopath/src/github.com/chaincode_example02/node/
+
+> docker exec -it peer0.org1.example.com bash
+
+peer0> cd /var/hyperledger/production/chaincodes
+
+cli> peer chaincode instantiate -C mychannel -n jes_cc_node -l node -v 1.0 -c '{"Args":["init","a","100","b","200"]}' 
+
+cli> peer chaincode query -C mychannel -n jes_cc_node -c '{"Args":["query","a"]}'
+
+cli> peer chaincode invoke -C mychannel -n jes_cc_node -c '{"Args":["invoke","a","b","10"]}'
+
+cli> peer chaincode query -C mychannel -n jes_cc_node -c '{"Args":["query","a"]}'
+
+
+~~~
