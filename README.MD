@@ -17,5 +17,7 @@ Add package.json dependencies
 ~~~
 $ sudo usermod -a -G docker $USER 
 $ sudo service docker restart
+
+!!! reboot
 ~~~
 
