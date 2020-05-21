@@ -21,3 +21,17 @@ $ sudo service docker restart
 !!! reboot
 ~~~
 
+- chaincode install options
+    - c : chaincode constructor
+    - l : chaincode programming languege
+    - n : chaincode name
+    - p : chaincode path
+    - v : chaincode version
+
+- chaincode instantiate options
+    - C : network name
+    - c : chaincode constructor message
+    - E : endorsing chaincode
+    - v : chaincode version
+    - V : system chaincode name
+
